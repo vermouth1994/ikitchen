@@ -1,0 +1,23 @@
+<ion-header-bar align-title="center" class="bar-light classification">
+  <a class="button button-clear ion-ios-arrow-left" href="#"></a>
+  <h1 class="title">菜谱分类</h1>
+</ion-header-bar>
+
+<ion-content class="classification">
+  <!--<div ng-bind="error"></div>-->
+  <div ng-repeat="c in cf_list" class="cl">
+    <h1 ng-bind="c.tag"></h1>
+    <div class="menu-panel">
+      <div class="col col-25" ng-repeat="i in c.data">
+        <a href="#/menu/menu-list" ng-click="goMeneList(i.id)" class="tile-link">
+          <articel>
+            <div class="cover"><img src="{{i.pic}}"  alt="" width="100%;"  data-ng-init="load()"></div>
+            <div class="mask"></div>
+            <div class="title name" ng-bind="i.Mn_name"></div>
+          </articel>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

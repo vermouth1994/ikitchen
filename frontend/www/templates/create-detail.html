@@ -1,0 +1,75 @@
+<ion-header-bar align-title="center" class="bar-light create_detail">
+  <a class="button button-clear ion-ios-arrow-left" href="#/create/name"></a>
+  <h1 class="title">创建菜谱</h1>
+</ion-header-bar>
+
+<ion-content class="create_detail">
+	<div class="cover">+ 菜谱封面</div>
+	<div class="box">
+    <div class="title">
+      <input type="text" ng-model="menuName">
+    </div>
+    <textarea placeholder="输入这道美食背后的故事"></textarea>
+    <!--用料-->
+    <div class="material">
+      <h4>用料</h4>
+      <ion-list show-delete="data.mshowDeleteReorder" show-reorder="data.mshowDeleteReorder">
+        <ion-item ng-repeat="material in materials" item="material" class="item-remove-animate">
+          <input type="text" placeholder="食材：如鸡蛋" ng-model="material.material" ng-style="mate">
+          <input type="text" placeholder = "用量：如1个" ng-model="material.amount"  ng-style="mate">
+
+          <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(material,'materials')"> </ion-delete-button>
+          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(material, $fromIndex, $toIndex,'materials')"></ion-reorder-button>
+        </ion-item>
+      </ion-list>
+
+      <div class="add">
+        <a class="" ng-click="add('materials')">再增加一行</a>
+        <a class="adj" ng-bind="data.adj" ng-click="adjust('materials')" ></a>
+      </div>
+    </div>
+    <!--插件 end-->
+
+    <div class="steps">
+      <h4>做法</h4>
+      <ion-list show-delete="data.showDeleteReorder" show-reorder="data.showDeleteReorder">
+        <ion-item ng-repeat="step in steps" item="step" class="item-remove-animate">
+          <h5 ng-bind="'步骤'+{{$index+1}}"></h5>
+          <div class="stepImg" src="{{step.img}}" ng-style="stepImg">
+            + 步骤图
+          </div>
+          <input type="text" placeholder="添加步骤说明" ng-model="step.desc">
+
+          <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(step,'steps')"> </ion-delete-button>
+          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(step, $fromIndex, $toIndex,'steps')"></ion-reorder-button>
+        </ion-item>
+      </ion-list>
+
+      <div class="add">
+        <a class="" ng-click="add('steps')">再增加一步</a>
+        <a class="adj" ng-click="adjust('steps')" ng-bind="data.adjstep"></a>
+      </div>
+    </div>
+	</div>
+
+  <div class="tag">
+    <ul class="list">
+      <li class="item item-toggle menutag">
+        推荐至分类
+        <label class="toggle toggle-positive">
+          <i class="icon ion-chevron-right"></i>
+        </label>
+      </li>
+      <li class="item item-toggle scoop">
+        独家菜谱
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" checked="">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <button class="publish">发布这个菜谱</button>
+</ion-content>

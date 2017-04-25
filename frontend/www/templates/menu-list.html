@@ -1,0 +1,62 @@
+<!-- 菜谱搜索 菜谱列表 -->
+<ion-header-bar align-title="center" class="bar-light menulist">
+	<div class="bar bar-header item-input-inset">
+	  <button class="button button-clear ion-ios-arrow-left" ng-click="goBack()"></button>
+
+	  <div class="item-input-wrapper">
+	    <i class="icon ion-ios-search placeholder-icon"></i>
+	    <input type="search" placeholder="Search" ng-model="search_key" ng-focus="focus_search()">
+	  </div>
+
+	  <button class="button button-clear iconfont icon-shezhi" ng-click="modal.show()"></button>
+	</div>
+</ion-header-bar>
+
+<ion-content class="menulist">
+  <ul class="orderType tab-bar">
+    <li ng-class="sort_active.auto" ng-click="menuSort('auto')"><a href="">智能排序</a></li>
+    <li ng-class="sort_active.score" ng-click="menuSort('score')"><a href="">评分最高</a></li>
+    <li ng-class="sort_active.do_num" ng-click="menuSort('do_num')"><a href="">做过最多</a></li>
+  </ul>
+	<div class="list">
+    <a class="item item-thumbnail-left"  ng-click="goDetail(menu.id)" ng-repeat="menu in menuLists | orderBy:sortFlag :'desc'">
+      <img src="{{menu.title_pic}}">
+      <h2>{{menu.name}}</h2>
+      <p>{{menu.username}}</p>
+      <span>{{menu.score}}分 {{menu.do_num}}人做过</span>
+    </a>
+	</div>
+  <div ng-show="notFund" class="notFound">
+      <div>
+        <img src="img/notfound1.gif" alt="">
+        <p>没有搜索结果</p>
+      </div>
+  </div>
+</ion-content>
+
+
+<!--<script id="templates/modal.html" type="text/ng-template">   2.
+  <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Contact</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">First Name</span>
+              <input ng-model="newUser.firstName" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Last Name</span>
+              <input ng-model="newUser.lastName" type="text">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input ng-model="newUser.email" type="text">
+            </label>
+            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+          </div>
+        </ion-content>
+  </ion-modal-view>
+</script>-->

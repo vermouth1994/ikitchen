@@ -1,0 +1,63 @@
+<!-- 菜谱搜索 -->
+<ion-header-bar align-title="center" class="bar-stable menu-search ">
+
+  <div class="bar bar-header item-input-inset">
+
+    <div class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input autofocus class="search" type="search" placeholder="菜谱、食材" ng-model="search_val" ng-keyup="mykey($event)" ng-change="search_change()">
+      <i class="icon ion-ios-close placeholder-icon" ng-show="search_show"  ng-click="del_key()"></i>
+    </div>
+
+    <button class="button button-clear color-o" ng-click="returnpage()">取消</button>
+
+
+  </div>
+</ion-header-bar>
+
+<ion-content class="menu-search">
+	<!---热门搜索 关键词-->
+	<div class="hot-key" ng-show="!search_show">
+    <div class="recently" ng-show="recent_show">
+      <div  >
+        <h4>最近搜索</h4>
+        <a href="" class="empty" ng-click="clearRecent()">清空</a>
+      </div>
+      <div class="key_list">
+        <a href="" ng-repeat="item in recent" ng-click="goToMenuList(item)">{{item}}</a>
+      </div>
+    </div>
+    <div class="hot">
+      <h4>热门搜索</h4>
+      <div class="key_list">
+        <a href="" ng-repeat="item in hot" ng-click="goToMenuList(item)">{{item}}</a>
+      </div>
+    </div>
+
+	</div>
+
+	<!--菜谱列表-->
+	<div class="list searchMenu" ng-show="search_show">
+
+    <a class="item item-icon-left" href="" ng-click="goToMenuList(search_val)" ng-bind="'搜菜谱 :'+search_val">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+    </a>
+		<!--搜索相关词-->
+      <a class="item" href="" ng-click="goToMenuList(key)" ng-repeat="(key,count) in keys | myLimitTo:6">{{key}}</a>
+
+	</div>
+
+	<!--根据搜索的相关收藏-->
+	<div class="collection" ng-show="search_show">
+		<h4>我的收藏</h4>
+		<div class="list">
+		     <a class="item item-avatar" href="#" ng-repeat="item in my_favorite">
+		      <img src="http://ikitchen.b0.upaiyun.com/kitchen/menus/{{item.id}}.jpg">
+		      <h2>{{item.name}}</h2>
+		    </a>
+		</div>
+	</div>
+
+
+
+</ion-content>

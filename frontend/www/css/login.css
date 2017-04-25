@@ -1,0 +1,38 @@
+/*
+ * login
+ */
+ion-content.login{
+  background: #fff;
+}
+.login .start{
+  padding-top: 100px;
+  height: 270px;
+}
+.login .start h2{
+  text-align: center;
+  padding-bottom: 40px;
+}
+.login .start p{
+  text-align: center;
+}
+.login .login_way{
+  text-align: center;
+}
+.login .login_way button{
+  display: block;
+  margin: 0 auto 15px;
+  height: 45px;
+  width: 70%;
+  color: #fff;
+  border: none;
+}
+.login .login_way .wechat{
+  background: #6fbd53;
+}
+.login .login_way .phone{
+  background: #fa6650;
+}
+
+.login .login_way .other{
+  color: #fa6650;
+}

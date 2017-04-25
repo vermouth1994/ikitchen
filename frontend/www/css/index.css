@@ -1,0 +1,85 @@
+/*
+ * index 首页
+ */
+/*首页*/
+ion-header-bar.ikitchen {
+  padding: 0;
+}
+
+.bar.bar-stable {
+  background: #fff;
+}
+
+.banner1, .banner1 .col {
+  padding: 0;
+}
+
+.sikitchen .search {
+  text-align: center;
+
+}
+
+/*首页 内容*/
+ion-content.sikitchen {
+  background: #f7f6f2
+}
+
+.banner1 {
+  height: 129px;
+}
+
+.cookiebook {
+  /* background: url(../img/img1.png); */
+  margin-right: 1px;
+}
+
+.attention {
+  /* background: url(../img/img2.png); */
+  margin-left: 1px;
+}
+
+.cookiebook img, .attention img, .scoller img, .weekly_box img {
+  width: 100%;
+}
+
+.scoller {
+  height: 75px;
+  margin-top: 5px;
+}
+
+.scoller .slider-pager {
+  bottom: 7px;
+}
+
+.slider-pager .slider-pager-page {
+  color: #f96650;
+}
+
+.weekly {
+  color: #3f3e3a;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*每周流行菜谱*/
+.weekly_popu .item h2 {
+  margin-bottom: 12px;
+}
+
+.weekly_popu .avatar {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 18px;
+  top: 8px;
+}
+
+.weekly_popu .avatar img {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 25px;
+}
+
+.weekly_popu .avatar h4 {
+  text-align: center;
+}

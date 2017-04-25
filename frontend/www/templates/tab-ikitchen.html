@@ -1,0 +1,56 @@
+<!--首页  -->
+<ion-header-bar align-title="center" class="bar-stable banner ikitchen">
+
+  <div class="bar bar-header item-input-inset">
+
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input autofocus class="search" type="search" placeholder="菜谱、食材" ng-click="toSearchPage()"> <!--跳转到搜索页-->
+    </label>
+
+    <a class="button button-clear iconfont icon-basketorganicfoodv1codropswojciechzasina" ng-click="" href="#/menu/menu-search-page">
+    </a>
+
+  </div>
+</ion-header-bar>
+
+<ion-content class="ikitchen">
+    <!--1. 本周流行菜谱 关注动态-->
+    <div class="row banner1">
+        <div class="col col-50 cookiebook">
+          <a href="#/ikitchen/weekly_popular">
+            <img src="img/img1.png" alt="">
+          </a>
+        </div>
+        <div class="col col-50 attention">
+          <a href="#/test">
+            <img src="img/img2.png" alt="">
+          </a>
+        </div>
+    </div>
+  <!--2.滚动图-->
+  <ion-slide-box class="scoller">
+    <ion-slide>
+      <div class="box blue">
+        <img src="img/slid1.png" alt="">
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box yellow">
+        <img src="img/slid2.png" alt="">
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+  <!--厨房周刊-->
+  <div class="weekly_box">
+    <div class="weekly">
+      厨房周刊 | 你最不想错过的美食新鲜事
+    </div>
+    <a href="">
+      <!--<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="">-->
+     <img src="img/weekly.png" alt="">
+    </a>
+  </div>
+
+  <div></div>
+</ion-content>

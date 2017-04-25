@@ -1,0 +1,81 @@
+/*
+ * 搜索页面 search
+ */
+ion-content.menu-search {
+  padding-top: 10px;
+  background: #fff;
+}
+
+.menu-search .hot-key {
+  background: #fff;
+  padding-top: 20px;
+}
+
+.hot-key h4 {
+  color: #5f5f5d;
+  font-size: 14px;
+}
+
+.menu-search .collection h4 {
+  font-size: 14px;
+  color: #ccc;
+  margin-left: 20px;
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+.menu-search .recently h4 {
+  display: inline-block;
+}
+
+.menu-search .recently a.empty {
+  line-height: 34px;
+  float: right;
+  color: #5f5f5d;
+}
+
+.menu-search .hot-key .recently, .menu-search .hot-key .hot {
+  padding: 0 20px;
+}
+
+.menu-search .hot-key .recently .key_list a, .menu-search .hot-key .hot .key_list a {
+  border-radius: 3px;
+  color: #5f5f5d;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #fafaf8;
+}
+.menu-search .searchMenu{
+  padding-left: 30px;
+}
+.menu-search .searchMenu .item {
+  font-size: 14px;
+  line-height: 30px;
+  border: none;
+  padding: 5px 0;
+  color: #565656;
+}
+
+.menu-search .item i {
+  font-size: 18px;
+}
+
+.menu-search .collection {
+  border-top: 1px solid #eaeaea;
+  margin:0 10px;
+}
+
+.menu-search .collection img {
+  width: 45px;
+  height: 45px;
+}
+
+.menu-search .collection .item {
+  border:none;
+  padding:5px 70px 0;
+}
+
+.menu-search .collection .item h2 {
+  line-height: 45px;
+}

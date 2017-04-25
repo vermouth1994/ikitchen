@@ -1,0 +1,19 @@
+/* 模态框 */
+.modal{
+  top:60%;
+}
+.modal .radio-content{
+  height: 40px;
+}
+.modal ion-content .item-content{
+  padding-left: 44px;
+  font-size: 14px;
+  color:#61605b;
+  line-height: 40px;
+  height: 40px;
+}
+.modal ion-content .radio-icon{
+  color:#ff654d;
+  font-size: 16px;
+  left:0;/* icon改到左侧 */
+}

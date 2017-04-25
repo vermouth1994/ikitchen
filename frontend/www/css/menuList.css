@@ -1,0 +1,53 @@
+/*
+ * menulist 菜谱搜索列表
+ */
+ion-header-bar.menulist{
+  padding: 0;
+}
+ion-content.menulist{
+  padding-top: 10px;
+}
+
+.bar-light .button.ion-ios-arrow-left{
+  margin-right: 20px;
+}
+.menulist .list a h2{
+  margin: 5px 0 10px 0;
+  color: #3a3a33;
+  font-family: "微软雅黑";
+}
+
+.menulist .list .item p{
+  color: #c5c5c2;
+  font-size: 12px;
+}
+
+.menulist .list .item span{
+  font-size: 12px;
+}
+.menulist .orderType{
+  overflow: auto;
+  margin-bottom: 10px;
+}
+.menulist .orderType li{
+  float: left;
+  width: 33%;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+.menulist .orderType li.active{
+  border-bottom: 2px solid #ff654d;
+}
+.menulist .orderType li a{
+  color: #000;
+}
+.menulist .notFound{
+  text-align: center;
+  margin: 100px auto;
+  width: 200px;
+}
+.menulist .notFound img{
+  width: 200px;
+}

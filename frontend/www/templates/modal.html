@@ -1,0 +1,20 @@
+<ion-modal-view class="modal">
+
+    <ion-header-bar class="bar bar-header bar-light">
+        <button class="button button-clear button-assertive" ng-click="modal.hide()">取消</button>
+        <h1 class="title">搜索</h1>
+    </ion-header-bar>
+
+    <ion-content class="">
+    
+        <ion-list>
+          <ion-radio ng-model="choice" ng-value="all">所有菜谱</ion-radio>
+          <ion-radio ng-model="choice" ng-value="scoretop">评分最高</ion-radio>
+          <ion-radio ng-model="choice" ng-value="domost">做过最多</ion-radio>
+          <ion-radio ng-model="choice" ng-value="eight">只看8分以上</ion-radio>
+          <ion-radio ng-model="choice" ng-value="amount">只看500人以上做过</ion-radio>
+        </ion-list>
+
+    </ion-content>
+
+</ion-modal-view>

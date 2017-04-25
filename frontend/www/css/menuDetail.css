@@ -1,0 +1,133 @@
+/*
+* 菜谱详情页 detail
+*/
+.menu_img{
+  width: 100%;
+  height: 280px;
+}
+.menu_img img{
+  width: 100%;
+  height: 100%;
+}
+ion-content.menu_detail{
+  background: #fff;
+}
+.menu_detail .content{
+  padding:14px 14px 0 14px;
+}
+.menu_detail .menu_name{
+  border-bottom: 1px solid #e5e5e3;
+  font-family: "微软雅黑";
+  font-size: 24px;
+  text-align: center;
+  color: #3d3d36;
+}
+.menu_name h2{
+
+}
+.menu_name p{
+  font-size: 12px;
+
+}
+.author{
+  overflow: hidden;
+  padding-top: 14px;
+}
+.author img{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: pink;
+  float: left;
+}
+.author p{
+  float: left;
+  line-height: 60px;
+  padding-left: 10px;
+
+}
+.desc{
+  line-height: 1.5;
+}
+.menu_detail .material h4,.step h4{
+  font-size: 18px;
+  font-weight: 800;
+  border-bottom: 1px solid #e5e5e3;
+  padding-bottom:10px;
+}
+.material ul li{
+  border-bottom: 1px solid #e5e5e3;
+  line-height: 24px;
+  padding:5px 0;
+  color: #3d3d36;
+}
+.material ul li span{
+  display: inline-block;
+  width: 49%;
+  text-align: left;
+}
+.step div{
+  margin-top: 20px;
+}
+.step div img{
+  margin-bottom: 10px;
+  width: 80%;
+}
+.step div p {
+  width: 80%;
+  line-height: 1.5;
+  color: #3d3d36;
+}
+
+.production{
+  border-top:1px solid #e4e4e4;
+  padding-top: 10px;
+}
+.production h3{
+  font-size: 18px;
+  font-family: "微软雅黑";
+}
+.production .show{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap; /*不换行*/
+  height: 300px;
+  width: 400px;
+}
+.production .show li{
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  border:1px solid #e4e4e4;
+  text-align: center;
+  margin:0 10px;
+}
+.production .show li>img{
+  height: 200px;
+  background: pink;
+}
+.production .show li .auth img{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: pink;
+  float: left;
+  margin-left: 20px;
+}
+.production .show li .auth p{
+  margin-left: 10px;
+  float: left;
+  margin-left: 20px;
+  line-height: 30px;
+}
+.upload{
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  background: #f96650;
+  color: #fff;
+  font-family: "微软雅黑";
+}

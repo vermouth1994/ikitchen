@@ -1,0 +1,84 @@
+/*
+ *菜谱分类
+ */
+
+.classification a.cancel {
+  color: #ff726d;
+  text-decoration: none;
+  position: absolute;
+  left: 10px;
+}
+
+.classification .menu-panel {
+  background: #fff;
+  padding: 0 5px;
+}
+
+.classification .menu-panel .col {
+  position: relative;
+}
+
+.classification h1 {
+  color: #808080;
+  font-size: 20px;
+  margin: 5px 0 5px 10px;
+  font-weight: bold;
+}
+
+.classification .menu-panel .col span {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+  display: inline-block;
+  margin-left: 24%;
+
+}
+
+.menu-panel .col-25 {
+  float: left;
+}
+.classification .tile-link{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.classification .tile-link .title{
+  bottom: 3px;
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.classification .mask:after, .mask:before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.classification .mask:before {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  height: 15%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+.classification .mask:after {
+  background: -owg-linear-gradient(bottom,rgba(0,0,0,.4),hsla(0,0%,100%,0));
+  background: -webkit-linear-gradient(bottom,rgba(0,0,0,.4),hsla(0,0%,100%,0));
+  background: -moz-linear-gradient(bottom,rgba(0,0,0,.4),hsla(0,0%,100%,0));
+  background: -o-linear-gradient(bottom,rgba(0,0,0,.4),hsla(0,0%,100%,0));
+  -pie-background: -pie-linear-gradient(bottom,rgba(0,0,0,.4),hsla(0,0%,100%,0));
+  background: linear-gradient(bottom,rgba(0,0,0,.4),hsla(0,0%,100%,0));
+  height: 50%;
+  bottom: 15%;
+}
+
+article {
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: relative;
+}

@@ -1,0 +1,181 @@
+<ion-header-bar align-title="center" class="bar-light menu_detail">
+  <a class="button button-clear ion-ios-arrow-left" href="" ng-click="goBack()" ></a>
+  <h1 class="title">菜谱详情页</h1>
+</ion-header-bar>
+
+<ion-content class="menu_detail" >
+  <div class="menu_img">
+    <img src="{{menu.pic}}" alt="">
+  </div>
+  <div class="content">
+    <div class="menu_name">
+      <h2 ng-bind="menu.name"></h2>
+      <p ng-bind="menu.score+'综合评分• '+menu.do_num+  '人做过'"> </p>
+    </div>
+    <!--介绍-->
+    <div class="desc_box">
+      <div class="author">
+        <img src="{{menu.user_pic}}" alt="">
+        <p ng-bind="menu.username"></p>
+      </div>
+      <div class="desc" ng-bind="menu.content"></div>
+    </div>
+    <!--用料-->
+    <div class="material">
+      <h4>用料</h4>
+      <ul>
+        <li ng-repeat="m in menu.material">
+          <span ng-bind="m.name"></span>
+          <span ng-bind="m.amount"></span>
+        </li>
+
+      </ul>
+    </div>
+    <!--步骤-->
+    <div class="step">
+      <div class="step1" ng-repeat="s in menu.details">
+        <h4 ng-bind="'步骤'+s.id"></h4>
+        <img src="{{s.url}}" alt="">
+        <p ng-bind="s.desc"></p>
+      </div>
+    </div>
+    <!--步骤 end-->
+
+    <!--大家做的这道菜 作品-->
+    <div class="production">
+      <h3>大家做的这道菜</h3>
+
+      <ul class="show">
+        <ion-scroll zooming="true" direction="x">
+          <li>
+            <img src="img/pruduct1.png" alt="">
+            <div class="auth">
+              <img src="img/avatar4.jpg" alt="">
+              <p>焦糖玛奇朵</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/pruduct1.png" alt="">
+            <div class="auth">
+              <img src="img/avatar4.jpg" alt="">
+              <p>焦糖玛奇朵</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/pruduct1.png" alt="">
+            <div class="auth">
+              <img src="img/avatar4.jpg" alt="">
+              <p>焦糖玛奇朵</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/pruduct1.png" alt="">
+            <div class="auth">
+              <img src="img/avatar4.jpg" alt="">
+              <p>焦糖玛奇朵</p>
+            </div>
+          </li>
+        </ion-scroll>
+      </ul>
+
+    </div>
+
+  </div>
+  <div class="upload">
+    上传我的作品
+  </div>
+
+
+  <!--
+
+    <div class="menu_img">
+      <img src="img/menubig1.png" alt="">
+    </div>
+    <div class="content">
+      <div class="menu_name">
+        <h2>水煮肉片(吃不够的下饭菜)</h2>
+        <p>8.2综合评分 • 28人做过</p>
+      </div>
+      &lt;!&ndash;介绍&ndash;&gt;
+      <div class="desc_box">
+        <div class="author">
+          <img src="img/avatar1.jpg" alt="">
+          <p>零七八碎的小时工</p>
+        </div>
+        <div class="desc">
+          <p>第一次吃水煮肉片是很小的时候 那时候只知道 哇 肿么会有这么好吃的菜 对胃口 够麻辣 色香味俱全~\(≧▽≦)/~</p>
+          <p>渐渐的饭店里也都有这个菜了 心里那阵小欢喜哦 不管什么时候 不管大人的反对 这个菜已经成为必点菜!</p>
+          <p>再后来慢慢大了 虽然还是很爱吃这道菜 但是已经开始觉得在饭店吃很不划算了!肉片没有多少 底下配菜一堆 最主要的是价格飞涨...</p>
+          <p>于是再也忍不了了 终于决定自己做 这样省钱不说 最主要的是干净卫生 还可以多放点肉肉哦!</p>
+        </div>
+      </div>
+      &lt;!&ndash;用料&ndash;&gt;
+      <div class="material">
+        <h4>用料</h4>
+        <ul>
+          <li><span>猪肉(牛肉亦可)</span><span>350g</span></li>
+          <li><span>油菜</span><span>2颗</span></li>
+          <li><span>油菜</span><span>2颗</span></li>
+          <li><span>油菜</span><span>2颗</span></li>
+        </ul>
+      </div>
+      &lt;!&ndash;步骤&ndash;&gt;
+      <div class="step">
+        <div class="step1">
+          <h4>步骤1</h4>
+          <img src="img/1step1.png" alt="">
+          <p>将肉切成薄片 加入淀粉 料酒 老抽 拌匀后备用（因为我以前做完感觉肉发白 不香 所以这次抓肉的时候就放老抽 ）</p>
+        </div>
+        <div class="step2">
+          <h4>步骤2</h4>
+          <img src="img/1step2.png" alt="">
+          <p>我喜欢带豆腐皮的 切丝 用开水焯一下备用</p>
+        </div>
+      </div>
+      &lt;!&ndash;大家做的这道菜 作品&ndash;&gt;
+      <div class="production">
+        <h3>大家做的这道菜</h3>
+
+          <ul class="show">
+            <ion-scroll zooming="true" direction="x">
+            <li>
+              <img src="img/pruduct1.png" alt="">
+              <div class="auth">
+                <img src="img/avatar4.jpg" alt="">
+                <p>焦糖玛奇朵</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/pruduct1.png" alt="">
+              <div class="auth">
+                <img src="img/avatar4.jpg" alt="">
+                <p>焦糖玛奇朵</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/pruduct1.png" alt="">
+              <div class="auth">
+                <img src="img/avatar4.jpg" alt="">
+                <p>焦糖玛奇朵</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/pruduct1.png" alt="">
+              <div class="auth">
+                <img src="img/avatar4.jpg" alt="">
+                <p>焦糖玛奇朵</p>
+              </div>
+            </li>
+          </ion-scroll>
+          </ul>
+
+      </div>
+
+    </div>
+    <div class="upload">
+      上传我的作品
+    </div>
+
+
+  </ion-content>
+  -->
