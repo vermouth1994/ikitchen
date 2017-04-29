@@ -1,0 +1,1 @@
+nohup gunicorn k_backend.wsgi:application -b 0.0.0.0:8090 -w 2 -k gevent --reload &
