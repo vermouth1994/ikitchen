@@ -1,6 +1,6 @@
 # ikitchen
-ikitchen 美食类Hybrid app,使用AngularJs+Ionic+cordova,后端Django提供接口
->界面
+ikitchen kitchen food mobile app,use AngularJs+Ionic+cordova, django backends for restful api
+>UI
 
 
  ![image](https://github.com/zgfang1993/ikitchen/blob/master/screen.gif)
